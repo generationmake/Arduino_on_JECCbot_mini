@@ -7,8 +7,8 @@ int destinyHeading=0;
 bool drive=false;
 
 void setup() {
-  //initMotors();
-  //setMotors(0, 0); 
+  initMotors();
+  setMotors(0, 0); 
   initDisplay();
   Serial.begin(9600);
   initBNO();
@@ -28,5 +28,7 @@ void loop() {
     drive=true;
 
   if(drive)
-    moveBNO055(destinyHeading, 50);
+    moveBNO055(destinyHeading, 100);
+  else
+    setMotors(0, 0);
 }
