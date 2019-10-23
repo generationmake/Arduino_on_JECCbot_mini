@@ -62,14 +62,8 @@ void updateBNO()
 
 String toStringBNO()
 {
-  String str="***************************************\n";
-  str+="BNO 055 data\n";
-  str+="Calibration status: "+String(bnoData.calibStat, DEC)+"%\n";
-  str+="\tSys: "+String(bnoData.sys, DEC)+"%\n";
-  str+="\tGyr: "+String(bnoData.gyr, DEC)+"%\n";
-  str+="\tACC: "+String(bnoData.acc, DEC)+"%\n";
-  str+="\tMAG: "+String(bnoData.mag, DEC)+"%\n";
-  str+="Heading: "+String(bnoData.heading, DEC)+"°\n";
-  str+="***************************************\n\n";
+  String str="BNO HEADING "+String(bnoData.heading, DEC)+"\nS"+String(bnoData.sys, DEC)+"G"+
+  String(bnoData.gyr, DEC)+"A"+String(bnoData.acc, DEC)+"M"+String(bnoData.mag, DEC);
+  
   return str;
 }
