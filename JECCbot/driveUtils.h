@@ -1,8 +1,13 @@
 /***Library for controlling the two driving motors with Arduino motor driver shield
+ * TODO: Use current sense, ramped speedup/ slowdown
  * Author: Jonas Wuehr
  * Date: 11.10.2019
  * Purpose: JECCbot mini
  */
+
+#ifndef DRIVEUTILS_H
+#define DRIVEUTILS_H
+
 #include <Arduino.h>
 
 #define DIRECTION_LEFT 12
@@ -23,3 +28,5 @@ void setMotors(int velocityLeft, int velocityRight);
 
 /***Break motors with breaking time in milliseconds***/
 void breakMotors(int timeMs);
+
+#endif

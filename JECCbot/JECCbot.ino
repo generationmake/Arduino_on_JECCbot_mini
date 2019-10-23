@@ -1,7 +1,10 @@
 #include <Wire.h>
-#include "driveUtils.h"
-#include "bno055.h"
-#include "displayShield.h"
+#include "BNO055.h"
+#include "DisplayShield.h"
+#include "MoveUtils.h"
+
+int destinyHeading=0;
+bool drive=false;
 
 void setup() {
   //initMotors();
@@ -14,4 +17,16 @@ void setup() {
 void loop() {
   updateBNO();
   writeStringDisplay(toStringBNO());
+  
+  if(getCurrentKeyDisplay()==DISPLAY_KEY_SELECT)
+    destinyHeading=bnoData.heading;
+ 
+  if(getCurrentKeyDisplay()==DISPLAY_KEY_LEFT)
+    drive=false;
+
+  if(getCurrentKeyDisplay()==DISPLAY_KEY_RIGHT)
+    drive=true;
+
+  if(drive)
+    moveBNO055(destinyHeading, 50);
 }

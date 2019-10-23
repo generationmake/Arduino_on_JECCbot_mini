@@ -4,6 +4,8 @@
  * Purpose: JECCbot mini
  */
  
+#ifndef BNO055_H
+#define BNO055_H
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -34,3 +36,5 @@ void updateBNO();
 
 /***Returns BNO Data as String***/
 String toStringBNO();
+
+#endif

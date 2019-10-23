@@ -1,4 +1,4 @@
-#include "displayShield.h"
+#include "DisplayShield.h"
 
 void triggerEDisplay()
 {
@@ -73,7 +73,7 @@ void writeStringDisplay(String s)
   char *cString= new char[s.length()];
   strcpy(cString, s.c_str());
   clearDisplay();
-  delay(200);
+  delay(5);
   setCursorDisplay(0, 0);
   for(int i=0; i<s.length(); i++)
   {
@@ -85,5 +85,46 @@ void writeStringDisplay(String s)
     if(i<s.length())
       sendCharDisplay(cString[i]);
   }
-  delay(200);
+  delay(90);
+}
+
+int getCurrentKeyDisplay()
+{
+  int keyVal=analogRead(DISPLAY_KEY);
+  int key;
+
+  Serial.println(keyVal);
+  
+  if(keyVal<DISPLAY_KEYVAL_RIGHT)
+  {
+    key=DISPLAY_KEY_RIGHT;
+  }
+  else if(keyVal<DISPLAY_KEYVAL_UP)
+  {
+    key=DISPLAY_KEY_UP;
+  }
+  else if(keyVal<DISPLAY_KEYVAL_DOWN)
+  {
+    key=DISPLAY_KEY_DOWN;
+  }
+  else if(keyVal<DISPLAY_KEYVAL_LEFT)
+  {
+    key=DISPLAY_KEY_LEFT;
+  }
+  else if(keyVal<DISPLAY_KEYVAL_SELECT)
+  {
+    key=DISPLAY_KEY_SELECT;
+  }
+  else
+  {
+    key=DISPLAY_KEY_NONE;
+  }
+
+  return key;
+}
+
+void waitForKeyDisplay(int key)
+{
+  while(key!=getCurrentKeyDisplay())
+    delay(10);
 }
