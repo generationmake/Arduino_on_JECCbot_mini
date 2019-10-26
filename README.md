@@ -26,26 +26,26 @@ This software is tested with these components and works. It may also work with o
 
 #### Arduino pin usage
 
-| 0 | not used (communication to PC) |
-| 1 | not used (communication to PC) |
-| 2 | not used |
-| 3 | Motor PWMA |
-| 4 | Display DB4 |
-| 5 | Display DB5 |
-| 6 | Display DB6 |
-| 7 | Display DB7 |
-| 8 | Display RS |
-| 9 | Display EN |
-| 10 | Display PWM |
-| 11 | Motor PWMB |
-| 12 | Motor DIRA |
-| 13 | Motor DIRB |
-| A0 | Motor SNS0 |
-| A1 | Motor SNS1 |
-| A2 | Display Key (Shield modified) |
-| A3 | not used |
-| A4 | I2C-SDA (BNO055) |
-| A5 | I2C-SCL (BNO055) |
+** 0 ** not used (communication to PC) 
+** 1 ** not used (communication to PC) 
+** 2 ** not used 
+** 3 ** Motor PWMA 
+** 4 ** Display DB4 
+** 5 ** Display DB5 
+** 6 ** Display DB6 
+** 7 ** Display DB7 
+** 8 ** Display RS 
+** 9 ** Display EN 
+** 10 ** Display PWM 
+** 11 ** Motor PWMB 
+** 12 ** Motor DIRA 
+** 13 ** Motor DIRB 
+** A0 ** Motor SNS0 
+** A1 ** Motor SNS1 
+** A2 ** Display Key (Shield modified) 
+** A3 ** not used 
+** A4 ** I2C-SDA (BNO055) 
+** A5 ** I2C-SCL (BNO055) 
 
 ### Mechanics
 
