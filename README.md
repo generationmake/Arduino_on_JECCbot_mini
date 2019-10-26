@@ -70,4 +70,4 @@ This software is tested with these components and works. It may also work with o
 
 Any suitable outdoor robot with differential steering which doesn't overload the motor drivers.
 
-For example the JECCbot mini
+For example the [JECCbot mini](https://github.com/generationmake/JECCbot_mini).
