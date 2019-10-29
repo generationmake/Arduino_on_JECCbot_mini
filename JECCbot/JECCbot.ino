@@ -2,20 +2,22 @@
 #include "BNO055.h"
 #include "DisplayShield.h"
 #include "MoveUtils.h"
+#include "gps.h"
 
 int destinyHeading=0;
 bool drive=false;
 
 void setup() {
-  initMotors();
+  /*initMotors();
   setMotors(0, 0); 
   initDisplay();
+  initBNO();*/
   Serial.begin(9600);
-  initBNO();
+  initGPS();
 }
 
 void loop() {
-  updateBNO();
+  /*updateBNO();
   writeStringDisplay(toStringBNO());
   
   if(getCurrentKeyDisplay()==DISPLAY_KEY_SELECT)
@@ -30,5 +32,6 @@ void loop() {
   if(drive)
     moveBNO055(destinyHeading, 80);
   else
-    setMotors(0, 0);
+    setMotors(0, 0);*/
+    //Serial.write("hallo\n");
 }
