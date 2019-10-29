@@ -10,7 +10,8 @@
 #include "DriveUtils.h"
 #include "BNO055.h"
 
-#define MOVE_BNO055_P 1.0
+#define MOVE_BNO055_P 3.0
+#define MOVE_BNO055_D 1.0
 
 /***Moves robot using BNO055 data to a heading between -180 and 180 with
  * the maximum velocity velMax

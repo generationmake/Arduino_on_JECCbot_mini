@@ -70,22 +70,39 @@ void initDisplay()
 
 void writeStringDisplay(String s)
 {
-  char *cString= new char[s.length()];
-  strcpy(cString, s.c_str());
-  clearDisplay();
-  delay(5);
-  setCursorDisplay(0, 0);
-  for(int i=0; i<s.length(); i++)
-  {
-    if(cString[i]=='\n')
+  static unsigned long displayTime, lastDisplayTime;
+  static bool sendDisplay;
+  displayTime=millis();
+  
+  if(sendDisplay)
+  {    
+    char *cString= new char[s.length()];
+    strcpy(cString, s.c_str());
+    clearDisplay();
+    delay(5);
+    setCursorDisplay(0, 0);
+    for(int i=0; i<s.length(); i++)
     {
-      setCursorDisplay(1, 0);
-      i++;
+      if(cString[i]=='\n')
+      {
+        setCursorDisplay(1, 0);
+        i++;
+      }
+      if(i<s.length())
+        sendCharDisplay(cString[i]);
     }
-    if(i<s.length())
-      sendCharDisplay(cString[i]);
+    delay(90);
   }
-  delay(90);
+
+  if((lastDisplayTime+DISPLAY_SEND_PERIOD)>displayTime)
+  {
+    sendDisplay=true;
+    lastDisplayTime=displayTime;
+  }
+  else
+  {
+    sendDisplay=false;
+  }
 }
 
 int getCurrentKeyDisplay()

@@ -28,7 +28,7 @@ void loop() {
     drive=true;
 
   if(drive)
-    moveBNO055(destinyHeading, 100);
+    moveBNO055(destinyHeading, 80);
   else
     setMotors(0, 0);
 }
