@@ -8,7 +8,7 @@
 
 #include <Arduino.h>
 #include "DriveUtils.h"
-#include "BNO055.h"
+#include "Bno055.h"
 
 #define MOVE_BNO055_P 3.0
 #define MOVE_BNO055_D 1.0
