@@ -1,8 +1,14 @@
+/***Library for encoding NMEA gps device
+ * Author: Jonas Wuehr
+ * Date: 22.10.2019
+ * Purpose: JECCbot mini
+ */
+
 #ifndef GPS_H
 #define GPS_H
 
 #include <Arduino.h>
-#include "geoUtils.h"
+#include "GeoUtils.h"
 
 #define GPS_BAUD 9600
 
