@@ -1,4 +1,4 @@
-/***Library for reading NMEA gps
+/***Library for basic geo math
  * Author: Jonas Wuehr
  * Date: 30.10.2019
  * Purpose: JECCbot mini
