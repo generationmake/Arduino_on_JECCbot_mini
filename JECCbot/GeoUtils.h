@@ -1,3 +1,9 @@
+/***Library for reading NMEA gps
+ * Author: Jonas Wuehr
+ * Date: 30.10.2019
+ * Purpose: JECCbot mini
+ */
+
 #ifndef GEOUTILS_H
 #define GEOUTILS_H
 
