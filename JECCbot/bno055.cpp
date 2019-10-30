@@ -1,4 +1,4 @@
-#include "BNO055.h"
+#include "Bno055.h"
 
 BNOData bnoData;
 

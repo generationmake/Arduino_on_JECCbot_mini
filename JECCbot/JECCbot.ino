@@ -1,8 +1,9 @@
 #include <Wire.h>
-#include "BNO055.h"
+#include "Bno055.h"
 #include "DisplayShield.h"
 #include "MoveUtils.h"
-#include "gps.h"
+#include "Gps.h"
+#include "GeoUtils.h"
 
 int destinyHeading=0;
 bool drive=false;
