@@ -1,7 +1,7 @@
 /***Simple JECCbot go straight with BNO055 example. Destiny heading can be set with select key.
  * Driving can be started with right key and stopped with left key.
  * Author: Jonas Wuehr
- * Date: 11.10.2019
+ * Date: 3.11.2019
  * Purpose: JECCbot mini
  */
 
