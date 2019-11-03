@@ -4,6 +4,8 @@ void moveBNO055(int heading, int velMax)
 {
   static int offset, offsetOld;
 
+  updateBNO();
+
   offsetOld=offset;
   offset=heading-bnoData.heading;
   

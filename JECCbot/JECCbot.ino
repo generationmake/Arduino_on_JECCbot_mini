@@ -1,38 +1,36 @@
-#include <Wire.h>
-#include "Bno055.h"
-#include "DisplayShield.h"
-#include "MoveUtils.h"
-#include "Gps.h"
-#include "GeoUtils.h"
+/***Simple JECCbot go straight with BNO055 example. Destiny heading can be set with select key.
+ * Driving can be started with right key and stopped with left key.
+ * Author: Jonas Wuehr
+ * Date: 11.10.2019
+ * Purpose: JECCbot mini
+ */
 
-int destinyHeading=0;
-bool drive=false;
+#include "JECCbot.h"
+
+JECCbot bot;
+
+int destinyHeading;
+
+bool drive;
 
 void setup() {
-  /*initMotors();
-  setMotors(0, 0); 
-  initDisplay();
-  initBNO();*/
-  Serial.begin(9600);
-  initGPS();
+  drive=false;
+  destinyHeading=0;
 }
 
 void loop() {
-  /*updateBNO();
-  writeStringDisplay(toStringBNO());
-  
-  if(getCurrentKeyDisplay()==DISPLAY_KEY_SELECT)
-    destinyHeading=bnoData.heading;
- 
-  if(getCurrentKeyDisplay()==DISPLAY_KEY_LEFT)
+  if(bot.getCurrentKey()==DISPLAY_KEY_SELECT)
+    destinyHeading=bot.getBNOData().heading;
+
+  if(bot.getCurrentKey()==DISPLAY_KEY_LEFT)
     drive=false;
 
-  if(getCurrentKeyDisplay()==DISPLAY_KEY_RIGHT)
+  if(bot.getCurrentKey()==DISPLAY_KEY_RIGHT)
     drive=true;
 
   if(drive)
-    moveBNO055(destinyHeading, 80);
-  else
-    setMotors(0, 0);*/
-    //Serial.write("hallo\n");
+    bot.moveToHeading(destinyHeading, 50);
+  
+  bot.sendStringToDisplay(bot.toStringBNOData());
+
 }

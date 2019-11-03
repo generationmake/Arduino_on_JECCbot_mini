@@ -17,7 +17,7 @@ float calculateDistance(Coordinate c1, Coordinate c2)
   return 6371000* 2 * atan2(sqrt(a), sqrt(1-a));       
 }
 
-float calculateHeading(Coordinate c1, Coordinate c2)
+float calculateBearing(Coordinate c1, Coordinate c2)
 {
   float la1=c1.latitude; float lo1=c1.longitude;
   float la2=c2.latitude; float lo2=c2.longitude;

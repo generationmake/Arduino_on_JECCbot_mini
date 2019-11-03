@@ -4,12 +4,12 @@ void initMotors()
 {
   pinMode(DIRECTION_LEFT, OUTPUT);
   pinMode(DIRECTION_RIGHT, OUTPUT);
-  pinMode(BREAK_LEFT, OUTPUT);
-  pinMode(BREAK_RIGHT, OUTPUT);
+  //pinMode(BREAK_LEFT, OUTPUT);
+  //pinMode(BREAK_RIGHT, OUTPUT);
   analogWrite(PWM_LEFT, 0);
   analogWrite(PWM_RIGHT, 0);
-  digitalWrite(BREAK_LEFT, HIGH);
-  digitalWrite(BREAK_RIGHT, HIGH);
+  //digitalWrite(BREAK_LEFT, HIGH);
+  //digitalWrite(BREAK_RIGHT, HIGH);
 }
 
 
@@ -31,7 +31,7 @@ void setMotorLeft(int velocity)
     analogWrite(PWM_LEFT, velocity);
     digitalWrite(DIRECTION_LEFT, HIGH);
   }
-  digitalWrite(BREAK_LEFT, LOW);  
+  //digitalWrite(BREAK_LEFT, LOW);  
 }
 
 void setMotorRight(int velocity)
@@ -52,7 +52,7 @@ void setMotorRight(int velocity)
     analogWrite(PWM_RIGHT, velocity);
     digitalWrite(DIRECTION_RIGHT, HIGH);
   }
-  digitalWrite(BREAK_RIGHT, LOW);  
+  //digitalWrite(BREAK_RIGHT, LOW);  
 }
 
 void setMotors(int velocityLeft, int velocityRight)
@@ -64,13 +64,13 @@ void setMotors(int velocityLeft, int velocityRight)
 void breakMotorLeft()
 {
   analogWrite(PWM_LEFT, 0);
-  digitalWrite(BREAK_LEFT, HIGH);  
+  //digitalWrite(BREAK_LEFT, HIGH);  
 }
 
 void breakMotorRight()
 {
   analogWrite(PWM_LEFT, 0);
-  digitalWrite(BREAK_LEFT, HIGH);
+  //digitalWrite(BREAK_LEFT, HIGH);
 }
 
 void breakMotors(int timeMs)
