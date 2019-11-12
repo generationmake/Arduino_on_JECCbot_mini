@@ -14,12 +14,13 @@ int destinyHeading;
 bool drive;
 
 void setup() {
+  bot.initJECCbot();
   drive=false;
   destinyHeading=0;
 }
 
 void loop() {
-  if(bot.getCurrentKey()==DISPLAY_KEY_SELECT)
+  /*if(bot.getCurrentKey()==DISPLAY_KEY_SELECT)
     destinyHeading=bot.getBNOData().heading;
 
   if(bot.getCurrentKey()==DISPLAY_KEY_LEFT)
@@ -31,6 +32,7 @@ void loop() {
   if(drive)
     bot.moveToHeading(destinyHeading, 50);
   
-  bot.sendStringToDisplay(bot.toStringBNOData());
+  bot.sendStringToDisplay(bot.toStringBNOData());*/
+  bot.setMotorSpeeds(50, 50);
 
 }

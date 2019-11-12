@@ -1,6 +1,8 @@
 #include "JECCbot.h"
 
-JECCbot::JECCbot()
+JECCbot::JECCbot(){}
+
+void JECCbot::initJECCbot()
 {
   Serial.begin(9600);
   initBNO();
