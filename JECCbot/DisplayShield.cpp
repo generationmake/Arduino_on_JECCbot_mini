@@ -2,7 +2,7 @@
 
 void triggerEDisplay()
 {
-  delay(DISPLAY_SEND_TIMEOUT);
+  //delay(DISPLAY_SEND_TIMEOUT);
   digitalWrite(DISPLAY_EN, HIGH);
   delay(DISPLAY_SEND_TIMEOUT);
   digitalWrite(DISPLAY_EN, LOW);

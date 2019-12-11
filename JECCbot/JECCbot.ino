@@ -30,10 +30,13 @@ void loop() {
     drive=true;
 
   if(drive)
-    bot.moveToHeading(destinyHeading, 50);
+    bot.moveToHeading(destinyHeading, 100);
+    //bot.setMotorSpeeds(70, 70);
   else
+  {
+    bot.sendStringToDisplay(bot.toStringBNOData());
     bot.setMotorSpeeds(0, 0);
-    
-  bot.sendStringToDisplay(bot.toStringBNOData());
-
+  }
+  //  bot.sendStringToDisplay(bot.toStringBNOData());
+  //}
 }

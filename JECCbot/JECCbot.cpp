@@ -9,7 +9,7 @@ void JECCbot::initJECCbot()
   initDisplay();
   initMotors();
   setMotorSpeeds(0, 0);
-  initGPS();
+  //initGPS();
 }
 
 BNOData JECCbot::getBNOData()
@@ -20,6 +20,7 @@ BNOData JECCbot::getBNOData()
 
 String JECCbot::toStringBNOData()
 {
+  updateBNO();
   return toStringBNO();
 }
 

@@ -19,7 +19,7 @@ void moveBNO055(int heading, int velMax)
   }
 
   int offsetVel=(int)(offset*MOVE_BNO055_P+(offset-offsetOld)*MOVE_BNO055_D);
-  
+  //writeStringDisplay(String(offsetVel, DEC));  
   int left=velMax+offsetVel;
   int right=velMax-offsetVel;
 
