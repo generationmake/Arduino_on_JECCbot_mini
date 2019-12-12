@@ -1,3 +1,9 @@
+/***Library for controlling the standard 4-bit Arduino display shield
+ * Author: Jonas Wuehr
+ * Date: 22.10.2019
+ * Purpose: JECCbot mini
+ */
+
 #ifndef DISPLAY_SHIELD_4BIT_H
 #define DISPLAY_SHIELD_4BIT_H
 

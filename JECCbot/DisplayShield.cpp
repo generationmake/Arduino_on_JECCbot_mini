@@ -1,22 +1,53 @@
 #include "DisplayShield.h"
 
-void initDisplay()
+int displayType;
+
+void initDisplay(int type)
 {
-  initDisplay_4(); 
+  displayType = type;
+
+  if(displayType == DISPLAYSHIELD_4BIT)
+  {
+    initDisplay_4(); 
+  }
+  else if(displayType == DISPLAYSHIELD_TWI)
+  {
+    initDisplay_twi();
+  }
 }
 
 void writeStringDisplay(String s)
 {
-  writeStringDisplay_4(s); 
+  if(displayType == DISPLAYSHIELD_4BIT)
+  {
+    writeStringDisplay_4(s); 
+  }
+  else if(displayType == DISPLAYSHIELD_TWI)
+  {
+    writeStringDisplay_twi(s);
+  }
 }
 
 void waitForKeyDisplay(int key)
 {
-  waitForKeyDisplay_4(key); 
+  if(displayType == DISPLAYSHIELD_4BIT)
+  {
+    waitForKeyDisplay_4(key);
+  }
+  else if(displayType == DISPLAYSHIELD_TWI)
+  { 
+    waitForKeyDisplay_twi(key);
+  }
 }
 
 int getCurrentKeyDisplay()
 {
-  return getCurrentKeyDisplay_4(); 
+  if(displayType == DISPLAYSHIELD_4BIT)
+  {
+    return getCurrentKeyDisplay_4(); 
+  }  
+  else if(displayType == DISPLAYSHIELD_TWI)
+  {
+    return getCurrentKeyDisplay_twi();
+  }
 }
-

@@ -1,5 +1,11 @@
-#ifndef DISPLAY_KEY_MAPPING
-#define DISPLAY_KEY_MAPPING´
+/***Mapping of keys for all lcd display shields
+ * Author: Jonas Wuehr
+ * Date: 12.12.2019
+ * Purpose: JECCbot mini
+ */
+ 
+#ifndef DISPLAY_KEY_MAPPING_H
+#define DISPLAY_KEY_MAPPING_H
 
 #define DISPLAY_KEY_NONE 0
 #define DISPLAY_KEY_SELECT 1

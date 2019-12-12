@@ -91,7 +91,6 @@ void writeStringDisplay_4(String s)
       if(i<s.length())
         sendCharDisplay_4(cString[i]);
     }
-    delay(90);
   }
 
   if((lastDisplayTime+DISPLAY_SEND_PERIOD_4)>displayTime)
@@ -110,7 +109,7 @@ int getCurrentKeyDisplay_4()
   int keyVal=analogRead(DISPLAY_KEY_4);
   int key;
 
-  Serial.println(keyVal);
+  //Serial.println(keyVal);
   
   if(keyVal<DISPLAY_KEYVAL_RIGHT_4)
   {

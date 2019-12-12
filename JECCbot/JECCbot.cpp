@@ -6,7 +6,7 @@ void JECCbot::initJECCbot()
 {
   Serial.begin(9600);
   initBNO();
-  initDisplay();
+  initDisplay(DISPLAYSHIELD_4BIT);
   initMotors();
   setMotorSpeeds(0, 0);
   //initGPS();
