@@ -6,6 +6,7 @@
 #ifndef DISPLAYSHIELD_H
 #define DISPlAYSHIELD_H
 
+#include "DisplayKeyMapping.h"
 #include "DisplayShield4bit.h"
 
 void initDisplay();

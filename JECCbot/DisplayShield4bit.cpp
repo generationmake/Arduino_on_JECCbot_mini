@@ -107,34 +107,34 @@ void writeStringDisplay_4(String s)
 
 int getCurrentKeyDisplay_4()
 {
-  int keyVal=analogRead(DISPLAY_KEY);
+  int keyVal=analogRead(DISPLAY_KEY_4);
   int key;
 
   Serial.println(keyVal);
   
   if(keyVal<DISPLAY_KEYVAL_RIGHT_4)
   {
-    key=DISPLAY_KEY_RIGHT_4;
+    key=DISPLAY_KEY_RIGHT;
   }
   else if(keyVal<DISPLAY_KEYVAL_UP_4)
   {
-    key=DISPLAY_KEY_UP_4;
+    key=DISPLAY_KEY_UP;
   }
   else if(keyVal<DISPLAY_KEYVAL_DOWN_4)
   {
-    key=DISPLAY_KEY_DOWN_4;
+    key=DISPLAY_KEY_DOWN;
   }
   else if(keyVal<DISPLAY_KEYVAL_LEFT_4)
   {
-    key=DISPLAY_KEY_LEFT_4;
+    key=DISPLAY_KEY_LEFT;
   }
   else if(keyVal<DISPLAY_KEYVAL_SELECT_4)
   {
-    key=DISPLAY_KEY_SELECT_4;
+    key=DISPLAY_KEY_SELECT;
   }
   else
   {
-    key=DISPLAY_KEY_NONE_4;
+    key=DISPLAY_KEY_NONE;
   }
 
   return key;
@@ -142,6 +142,6 @@ int getCurrentKeyDisplay_4()
 
 void waitForKeyDisplay_4(int key)
 {
-  while(key!=getCurrentKeyDisplay_4_4_4())
+  while(key!=getCurrentKeyDisplay_4())
     delay(10);
 }

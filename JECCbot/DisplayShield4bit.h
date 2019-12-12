@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#include "DisplayKeyMapping.h"
+
 #define DISPLAY_KEY_4 A2
 #define DISPLAY_RS_4 8
 #define DISPLAY_EN_4 9
@@ -10,13 +12,6 @@
 #define DISPLAY_D5_4 5
 #define DISPLAY_D6_4 6
 #define DISPLAY_D7_4 7
-
-#define DISPLAY_KEY_NONE_4 0
-#define DISPLAY_KEY_SELECT_4 1
-#define DISPLAY_KEY_LEFT_4 2
-#define DISPLAY_KEY_DOWN_4 3
-#define DISPLAY_KEY_UP_4 4
-#define DISPLAY_KEY_RIGHT_4 5
 
 #define DISPLAY_SEND_TIMEOUT_4 0.5
 
@@ -41,4 +36,3 @@ int getCurrentKeyDisplay_4();
 void waitForKeyDisplay_4(int key);
 
 #endif
-

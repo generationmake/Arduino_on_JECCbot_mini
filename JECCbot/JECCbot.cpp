@@ -1,4 +1,3 @@
-  }
 #include "JECCbot.h"
 
 JECCbot::JECCbot(){}
