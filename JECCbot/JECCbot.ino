@@ -14,7 +14,7 @@ int destinyHeading;
 bool drive;
 
 void setup() {
-  bot.initJECCbot();
+  bot.initJECCbot(DISPLAYSHIELD_4BIT);
   drive=false;
   destinyHeading=0;
 }
