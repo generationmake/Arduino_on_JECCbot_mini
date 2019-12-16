@@ -14,10 +14,17 @@ This software is intended for Outdoor Robots which are based on Arduino. The sof
 
   * Arduino Mega ( https://store.arduino.cc/arduino-mega-2560-rev3 )
   * Arduino Motor Shield ( https://store.arduino.cc/arduino-motor-shield-rev3 )
-  * LCD Keypad Shield ( https://create.arduino.cc/projecthub/electropeak/using-1602-lcd-keypad-shield-w-arduino-w-examples-e02d95 or https://wiki.dfrobot.com/Arduino_LCD_KeyPad_Shield__SKU__DFR0009_ )
+  * LCD Keypad Shield
   * Adafruit 9-DOF Absolute Orientation IMU Fusion Breakout - BNO055 ( https://www.adafruit.com/product/2472 )
 
 This software is tested with these components and works. It may also work with other components but we simply haven't tested it.
+
+#### LCD Shield
+
+The software supports two different types of display shields: one with a parallel data interface to the display and another with a data interface via I2C.
+
+  * parallel LCD Keypad Shield ( https://create.arduino.cc/projecthub/electropeak/using-1602-lcd-keypad-shield-w-arduino-w-examples-e02d95 or https://wiki.dfrobot.com/Arduino_LCD_KeyPad_Shield__SKU__DFR0009_ )
+  * I2C LCD Keypad Shield ( https://www.reichelt.de/arduino-shield-display-lcd-kit-16x2-blau-weiss-ard-shd-lcd-p270527.html )
 
 #### Modifications
 
