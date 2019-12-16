@@ -20,7 +20,7 @@ class JECCbot
 
     /***Initializes JECCbot instance with all sensors and actuators***/
     JECCbot();
-    void initJECCbot();
+    void initJECCbot(int displayType);
 
     /***Returns data from BNO055 as struct including
      * calibration data and heading:
