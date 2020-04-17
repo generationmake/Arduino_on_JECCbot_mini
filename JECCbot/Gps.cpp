@@ -71,7 +71,7 @@ void decodeRMC(String rmcString)
   mmLon+=fields[5].charAt(9);
 
   float lon=ddLon.toFloat()+mmLon.toFloat()/60;
-  if(fields[6]=='W')
+  if(fields[6].charAt(0)=='W')
     lon=-lon;
 
   gpsData.coordinate.longitude=lon;
