@@ -5,7 +5,7 @@
  * Purpose: JECCbot mini
  */
 
-#include "JECCbot.h"
+#include <JECCbot.h>
 
 JECCbot bot;
 

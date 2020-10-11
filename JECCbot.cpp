@@ -9,7 +9,7 @@ void JECCbot::initJECCbot(int displayType)
   initDisplay(displayType);
   initMotors();
   setMotorSpeeds(0, 0);
-  //initGPS();
+  initGPS();
 }
 
 BNOData JECCbot::getBNOData()
