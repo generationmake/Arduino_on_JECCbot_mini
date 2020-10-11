@@ -79,7 +79,7 @@ void decodeRMC(String rmcString)
 
 void decodeGpsString(String gpsString)
 {
-  if(gpsString.indexOf("$GPRMC")!=-1)
+  if(gpsString.indexOf("$GPRMC") != -1 || gpsString.indexOf("$GNRMC") != -1)
   {
     decodeRMC(gpsString);    
   }
