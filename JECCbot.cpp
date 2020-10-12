@@ -5,10 +5,10 @@ JECCbot::JECCbot(){}
 void JECCbot::initJECCbot(int displayType)
 {
   Serial.begin(9600);
-  initBNO();
-  initDisplay(displayType);
-  initMotors();
-  setMotorSpeeds(0, 0);
+  //initBNO();
+  //initDisplay(displayType);
+  //initMotors();
+  //setMotorSpeeds(0, 0);
   initGPS();
 }
 

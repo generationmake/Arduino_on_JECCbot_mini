@@ -87,8 +87,9 @@ void decodeGpsString(String gpsString)
 }
 
 
-void serialEvent1()
+void SERCOM5_Handler()
 {
+  Serial1.IrqHandler();
   String gpsString=Serial1.readStringUntil(13);
   decodeGpsString(gpsString);
 }
